@@ -1,0 +1,53 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label" : "Title"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "zone_slice" : {
+            "type" : "Slice",
+            "fieldset" : "Zone Slice",
+            "description" : "Zone Slice",
+            "icon" : "account_box",
+            "non-repeat" : { },
+            "repeat" : {
+              "zone" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "zone" ],
+                  "label" : "Zone"
+                }
+              }
+            }
+          },
+          "category_slice" : {
+            "type" : "Slice",
+            "fieldset" : "Category Slice",
+            "description" : "Category Slice",
+            "icon" : "add_to_queue",
+            "non-repeat" : { },
+            "repeat" : {
+              "category" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "category" ],
+                  "label" : "Category"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

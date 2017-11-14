@@ -1,0 +1,26 @@
+[{
+  "id": "category",
+  "name": "Category",
+  "repeatable": true,
+  "value": "category.json"
+}, {
+  "id": "game",
+  "name": "Game",
+  "repeatable": true,
+  "value": "game.json"
+}, {
+  "id": "homepage",
+  "name": "Homepage",
+  "repeatable": true,
+  "value": "homepage.json"
+}, {
+  "id": "product",
+  "name": "Product",
+  "repeatable": true,
+  "value": "product.json"
+}, {
+  "id": "zone",
+  "name": "Zone",
+  "repeatable": true,
+  "value": "zone.json"
+}]
