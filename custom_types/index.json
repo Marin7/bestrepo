@@ -16,7 +16,7 @@
 }, {
   "id": "product",
   "name": "Product",
-  "repeatable": true,
+  "repeatable": false,
   "value": "product.json"
 }, {
   "id": "zone",
