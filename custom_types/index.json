@@ -23,9 +23,4 @@
   "name": "Zone",
   "repeatable": true,
   "value": "zone.json"
-}, {
-  "id": "id",
-  "name": "Name",
-  "repeatable": false,
-  "value": "id.json"
 }]
