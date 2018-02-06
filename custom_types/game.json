@@ -6,6 +6,20 @@
         "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
         "label" : "Title"
       }
+    },
+    "bool" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "true", "false" ],
+        "default_value" : "true",
+        "label" : "bool"
+      }
+    },
+    "keytext" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "keyText"
+      }
     }
   }
 }

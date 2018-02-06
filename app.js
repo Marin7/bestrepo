@@ -25,7 +25,7 @@ app.use((req, res, next) => {
     accessToken: PrismicConfig.accessToken,
     req,
   }).then((api) => {
-    req.prismic = {api};
+    req.prismic = { api };
     next();
   }).catch((error) => {
     next(error.message);
@@ -49,7 +49,7 @@ app.route('/').get((req, res) => {
 app.get('/help', (req, res) => {
   const repoRegexp = /^(https?:\/\/([-\w]+)\.[a-z]+\.(io|dev))\/api(\/v2)?$/;
   const [_, repoURL, name, extension, apiVersion] = PrismicConfig.apiEndpoint.match(repoRegexp);
-  const {host} = req.headers;
+  const { host } = req.headers;
   const isConfigured = name !== 'your-repo-name';
   res.render('help', {
     isConfigured,
@@ -63,11 +63,11 @@ app.get('/help', (req, res) => {
  * Preconfigured prismic preview
  */
 app.get('/preview', (req, res) => {
-  const {token} = req.query;
+  const { token } = req.query;
   if (token) {
     req.prismic.api.previewSession(token, PrismicConfig.linkResolver, '/').then((url) => {
       const cookies = new Cookies(req, res);
-      cookies.set(Prismic.previewCookie, token, {maxAge: 30 * 60 * 1000, path: '/', httpOnly: false});
+      cookies.set(Prismic.previewCookie, token, { maxAge: 30 * 60 * 1000, path: '/', httpOnly: false });
       res.redirect(302, url);
     }).catch((err) => {
       res.status(500).send(`Error 500 in preview: ${err.message}`);
